@@ -10,11 +10,12 @@ class JsonReader
     }
 
     public function getCars(){
-        $rowCars = $this->jsonData->{'cars'};
+        $carCreator = new CarCreator();
+        $rawCars = $this->jsonData->{'cars'};
         $cars = [];
-        foreach($rowCars as $rowCar){
-            $car = new Car()
-            array_push($cars, );
+        foreach($rawCars as $rawCar){
+            $car = $carCreator->createCar($rawCar);
+            array_push($cars, $car);
         }
         return $cars;
     }

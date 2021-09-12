@@ -14,14 +14,4 @@ class Hendai extends Car
     {
         $this->fuel -= self::FUEL_CONSUMPTION * 10/100;
     }
-
-    protected function __construct(){
-
-    }
-
-    public function createCar($rawCar): Car
-    {
-        if($rawCar->{'brand'} == 'Hendai')
-            return $this->__construct();
-    }
 }

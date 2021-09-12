@@ -21,6 +21,10 @@ abstract class Car implements ICar
         }
     }
 
+    public function __construct($km){
+        $this->km = $km;
+    }
+
     abstract protected function checkCrashed();
 
     abstract protected function useFuel();
